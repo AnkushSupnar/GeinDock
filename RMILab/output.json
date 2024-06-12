@@ -1,0 +1,56 @@
+[
+    {
+        "mode": 1,
+        "dist_from_best_mode_rmsd_l.b.": 0,
+        "dist_from_best_mode_rmsd_u.b.": 0,
+        "affinity": -7.9
+    },
+    {
+        "mode": 2,
+        "dist_from_best_mode_rmsd_l.b.": 26.56,
+        "dist_from_best_mode_rmsd_u.b.": 29.897,
+        "affinity": -7.9
+    },
+    {
+        "mode": 3,
+        "dist_from_best_mode_rmsd_l.b.": 3.376,
+        "dist_from_best_mode_rmsd_u.b.": 7.098,
+        "affinity": -7.8
+    },
+    {
+        "mode": 4,
+        "dist_from_best_mode_rmsd_l.b.": 2.823,
+        "dist_from_best_mode_rmsd_u.b.": 3.874,
+        "affinity": -7.8
+    },
+    {
+        "mode": 5,
+        "dist_from_best_mode_rmsd_l.b.": 27.049,
+        "dist_from_best_mode_rmsd_u.b.": 29.927,
+        "affinity": -7.7
+    },
+    {
+        "mode": 6,
+        "dist_from_best_mode_rmsd_l.b.": 5.626,
+        "dist_from_best_mode_rmsd_u.b.": 9.657,
+        "affinity": -7.6
+    },
+    {
+        "mode": 7,
+        "dist_from_best_mode_rmsd_l.b.": 3.285,
+        "dist_from_best_mode_rmsd_u.b.": 6.449,
+        "affinity": -7.6
+    },
+    {
+        "mode": 8,
+        "dist_from_best_mode_rmsd_l.b.": 27.276,
+        "dist_from_best_mode_rmsd_u.b.": 30.305,
+        "affinity": -7.5
+    },
+    {
+        "mode": 9,
+        "dist_from_best_mode_rmsd_l.b.": 27.349,
+        "dist_from_best_mode_rmsd_u.b.": 30.151,
+        "affinity": -7.4
+    }
+]

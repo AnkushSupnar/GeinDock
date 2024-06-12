@@ -1,0 +1,150 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    color: var(--bs-body-color);
+    text-align: var(--bs-body-text-align);
+
+    background-color: rgba(237, 242, 249, 1);
+    background: linear-gradient(135deg, #f1f3f4, #9b59b6);
+
+    /*    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+*/
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+
+/*.box {
+    background: rgba(255, 255, 255, 1);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 7px 14px 0 rgba(65, 69, 88, 0.1),
+        0 3px 6px 0 rgba(0, 0, 0, 0.07);
+    text-align: justify;
+}*/
+
+.title {
+    position: relative;
+    /* background-color: rgba(237, 242, 249, 1);*/
+    margin-bottom: 10px;
+    text-align: left;
+    border-radius: 0px;
+    /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);*/
+    display: flex;
+    /* Use flexbox */
+    align-items: center;
+    /* Vertically center the image and title container */
+}
+
+.title img {
+    max-width: 10%;
+    height: auto;
+    margin-right: 20px;
+    /* margin-left: 180px*/
+}
+
+.title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.title-text {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: var(--bs-body-font-family);
+    color: #2c7be5;
+}
+
+.subtitle {
+    font-size: 1rem;
+    font-weight: normal;
+    color: #666666;
+    align-self: flex-end;
+    /* Align the subtitle at the bottom right */
+}
+
+
+.annotation {
+    color: #5e6e82;
+}
+
+a {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+.head {
+    background-color: rgba(237, 242, 249, 1);
+}
+
+.bg-thead {
+    background-color: #EDF2F9;
+}
+
+.text-thead {
+    color: #344050;
+}
+
+.text-thead th {
+    font-weight: 600;
+}
+
+
+
+
+
+.table,
+.dataTable-table {
+    --bs-table-bg: transparent;
+    --bs-table-accent-bg: transparent;
+    --bs-table-striped-color: #212529;
+    --bs-table-striped-bg: rgba(0, 0, 0, 0.05);
+    --bs-table-active-color: #212529;
+    --bs-table-active-bg: rgba(0, 0, 0, 0.1);
+    --bs-table-hover-color: #212529;
+    --bs-table-hover-bg: rgba(0, 0, 0, 0.075);
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    vertical-align: top;
+    border-color: #dee2e6;
+}
+
+.table> :not(caption)>*>*,
+.dataTable-table> :not(caption)>*>* {
+    padding: 0.5rem 0.5rem;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+}
+
+.table>tbody,
+.dataTable-table>tbody {
+    vertical-align: inherit;
+}
+
+.table>thead,
+.dataTable-table>thead {
+    vertical-align: bottom;
+}
+
+.table> :not(:first-child),
+.dataTable-table> :not(:first-child) {
+    border-top: 2px solid white;
+}
+
+.selected {
+    background-color: #f0f0f0;
+    /* Light grey background for selected row */
+    color: #000;
+    /* Optional: Change text color for selected row */
+}

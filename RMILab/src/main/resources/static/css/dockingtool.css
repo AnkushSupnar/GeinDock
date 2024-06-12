@@ -1,0 +1,18 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+input[type="file"],
+input[type="number"],
+input[type="email"] {
+  margin-left: 1rem;
+}
+
+button {
+  margin-top: 1rem;
+}
+

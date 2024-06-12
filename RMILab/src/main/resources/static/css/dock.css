@@ -1,0 +1,168 @@
+.jumbotron {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0;
+  height: 1rem;
+
+}
+
+.file-upload {
+  display: block;
+  width: 100%;
+  height: 150px;
+  padding: 30px;
+  text-align: center;
+  border: 2px dashed #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.file-upload:hover {
+  background-color: #f5f5f5;
+}
+
+.file-upload span {
+  font-size: 24px;
+  color: #666;
+}
+
+.head-logo {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(80deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+}
+
+/*Loading icon*/
+#loadingIcon {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*Loading icon*/
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+
+
+.hide-div {
+  display: none;
+}
+
+.show-div {
+  display: block;
+}
+
+.no-caret::after {
+  display: none !important;
+}
+
+
+/*New code start
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  padding: 10px 20px;
+  background-color: #007BFF;
+}
+
+header h1 {
+  color: white;
+}
+
+h1 {
+  margin: 0;
+  color: #2a2a2a;
+  color: white;
+}
+
+.subtitle {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.viewer,
+.job-history {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.viewer>div,
+.ligand-options {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.settings {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.settings select,
+.settings button,
+.settings label {
+  margin-bottom: 10px;
+}
+
+.settings label {
+  display: flex;
+  align-items: center;
+}
+
+.settings input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.start-btn {
+  display: block;
+  background-color: #007BFF;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.start-btn:hover {
+  background-color: #0056b3;
+}
+
+.job-history h2 {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}*/

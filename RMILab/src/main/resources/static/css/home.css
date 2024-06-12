@@ -1,0 +1,23 @@
+.row {
+      height: 100vh;
+    }
+
+    /* Set height of each column and center content */
+    .col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* Set height of the slideshow */
+    .carousel-inner {
+      height: 100%;
+    }
+
+    /* Set height and width of the images in the slideshow */
+    .carousel-inner img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }

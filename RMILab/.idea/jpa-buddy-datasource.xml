@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="b0fee67f-7804-4091-94fb-cef136e9fe82" name="rmilab" url="jdbc:mysql://localhost:3306/rmilab?useSSL=false" driverClass="com.mysql.cj.jdbc.Driver" />
+    </data-sources>
+  </component>
+</project>
