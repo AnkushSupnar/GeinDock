@@ -1,6 +1,7 @@
 package com.rmilab.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.rmilab.dto.Center;
 import com.rmilab.dto.Coordinates;
 import com.rmilab.entity.Job;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,7 +42,7 @@ public class DockService {
         Coordinates coordinate = getGrid(jobName, email);
         boolean isGrid = coordinate != null && coordinate.getCenter().getX() != 0 && coordinate.getCenter().getY() != 0
                 && coordinate.getCenter().getZ() != 0;
-
+        
         return autoDockVinaService.blindDocking(jobName, email);
         /*
          * if(isGrid){

@@ -74,8 +74,8 @@
         <div class="row flex-fill">
             <!-- Left Column -->
             <div class="col-12 col-md-3 d-flex flex-column">
-                <h2>Welcome to <span class="highlight">GeinDock</span></h2>
-                <p>An advanced molecular docking software designed to facilitate complex scientific simulations and predictions, accelerating the pace of drug discovery.</p>
+                <h2>Welcome to <span class="highlight">Geinforce!</span></h2>
+                <p>Dedicated to advancing scientific exploration, Geinforce provides innovative software solutions designed to accelerate drug discovery and research. Our suite of tools, including the acclaimed GeinDock Suite and forthcoming products like ForceADME and GeinPredictor, is crafted to enhance efficiency and drive breakthroughs in the scientific community. Join us in our journey to transform the landscape of scientific research, empowering you to achieve remarkable results.</p>
             </div>
 
             <!-- Middle Column -->

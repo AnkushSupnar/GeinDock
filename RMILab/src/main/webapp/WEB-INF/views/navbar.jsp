@@ -58,7 +58,7 @@
 
 </style>
 <nav class="navbar navbar-expand-lg navbar-light navbar-fixed ">
-	<a class="navbar-brand" href="#">GeinDock</a>
+	<a class="navbar-brand" href="#">Geinforce</a>
 	<button class="navbar-toggler" type="button" data-toggle="collapse"
 		data-target="#navbarSupportedContent"
 		aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -104,7 +104,7 @@
 			<li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/contact">Contact
 					Us <span class="sr-only">(current)</span>
 			</a></li>
-			<li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/about">About
+		<li class="nav-item active"><a class="nav-link" href="${pageContext.request.contextPath}/about">About
 					Us <span class="sr-only">(current)</span>
 			</a></li>
 		</ul>

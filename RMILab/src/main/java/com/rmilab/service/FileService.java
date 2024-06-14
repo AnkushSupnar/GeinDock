@@ -682,6 +682,12 @@ public class FileService {
                     "vinaconfig"+ File.separator +
                     job.getJobName()+"_out.json";
         }
+        else if(fileType.equalsIgnoreCase("complex")) {
+        	return userDirectory+File.separator+
+        			email+File.separator+
+        			jobName+File.separator+
+        			"output"+File.separator+job.getOutputFile().replace(".pdbqt",".pdb");
+        }
         else
             return "";
     }

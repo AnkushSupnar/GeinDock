@@ -58,7 +58,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container custom-container">
         <div class="title">
             <img src="${pageContext.request.contextPath}/images/GeinDock_Suite_logo-Transperent.png" alt="GeinDock Suite Logo" />
             <div class="title-container">
@@ -67,38 +67,54 @@
             </div>
         </div>
 
-        <div class="container box">
+        <div class="container box ">
             <h5 class="text-primary mb-4">Docking Result Analysis</h5>
             <div class="row pb-3">
-                <div class="col-md-4 mb-3">
-                    <h6 class="fs--2 annotation mb-1">Submitted Protein</h6>
-                    <a href="#" id="proteinFileLink">protein.pdb</a>
+                <div class="col-md-3 mb-3  head-box">
+                	
+                    	<h6 class="fs--2 annotation mb-1">Submitted Protein</h6>
+                    	<div>
+                    		<i class="fas fa-download"></i>
+                    		<a class="fs--2" href="#" id="proteinFileLink">protein.pdb</a>
+                    	</div>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-3 mb-3 head-box">
                     <h6 class="fs--2 annotation mb-1">Submitted Ligand</h6>
-                    <a href="#" id="ligandFileLink">ligand.pdb</a>
+                    <div>
+        	        	<i class="fas fa-download"></i>
+        	        	<a class="fs--2"  href="#" id="ligandFileLink">ligand.pdb</a>
+        	        </div>
                 </div>
-                <div class="col-md-4 mb-3">
+                <div class="col-md-3 mb-3 head-box">
+                    <h6 class="fs--2 annotation mb-1">Complex file</h6>
+                    <div>
+                    	<i class="fas fa-download"></i>
+        	        	<a class="fs--2" href="#" id="complexFileLink">complex.pdb</a>
+        	        </div>
+                </div>
+                <div class="col-md-3 mb-3 head-box">
                     <h6 class="fs--2 annotation mb-1">Number of Cavities</h6>
-                    <span>9</span>
+                   
+                    <span class="fs--2" >9</span>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-7" id="viewport" style="height:500px;"></div>
-                <div class="col-md-5">
+                <div class="col-md-7 shadow-box" id="viewport" style="height:500px;"></div>
+                <div class="col-md-5 shadow-box">
                     <div class="table-responsive">
                         <table class="table text-center table-bordered mb-0">
                             <thead class="bg-thead text-thead">
                                 <tr>
                                     <th>CurPocket ID</th>
                                     <th>GeinDock score</th>
-                                    <th>Ligand File</th>
+                                    <th>Coordinates {X,Y,Z}</th>
+                                    <th><i class="fas fa-download">Ligand File </i></th>
                                 </tr>
                             </thead>
                             <tbody id="tableBody"></tbody>
                         </table>
                     </div>
-                </div>
+                </div>																																													
             </div>
         </div>
     </div>

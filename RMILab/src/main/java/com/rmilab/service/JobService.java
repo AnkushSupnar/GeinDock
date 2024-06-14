@@ -77,6 +77,17 @@ public class JobService {
         }
         return jobRepository.save(job);
     }
+    public Job updateJobCoordinates(String jobName, String email, String coordinates) {
+        Job job = jobRepository.findByJobNameAndEmail(jobName, email);
+        if (job == null) {
+            throw new EntityNotFoundException("Job not found");
+        }
+        job.setCoordinates(coordinates);
+        if(job.getSubmitDateTime()==null){
+            job.setSubmitDateTime(commonUtility.getDateAndTime(job.getJobName()));
+        }
+        return jobRepository.save(job);
+    }
 
 
     public List<Job> getByEmail(String email){

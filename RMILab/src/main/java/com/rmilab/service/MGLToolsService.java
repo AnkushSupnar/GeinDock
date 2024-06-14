@@ -5,6 +5,7 @@ import org.biojava.nbio.structure.Structure;
 import org.biojava.nbio.structure.StructureException;
 import org.biojava.nbio.structure.StructureTools;
 import org.biojava.nbio.structure.io.PDBFileReader;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,9 @@ public class MGLToolsService {
     String receptorPath;
     @Value("${file.user}")
     String userDirectory;
+    
+    @Autowired
+    JobService jobService;
 
     public String convertProteinToPDBQT(String filePath) {
         String outputFile = "";
@@ -139,6 +143,8 @@ public class MGLToolsService {
         }
         try {
             writeConfigToFile(receptorPath, ligandPath, center, outputPath);
+            String coordinates = " {\"center\":{\"x\":"+center[0]+",\"y\":"+center[1]+",\"z\":"+center[2]+"},\"size\":{\"x\":40,\"y\":40,\"z\":40}}";
+            jobService.updateJobCoordinates(jobName, email, coordinates);
         } catch (IOException e) {
             e.printStackTrace();
         }

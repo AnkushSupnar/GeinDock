@@ -17,6 +17,9 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+ .custom-container {
+            max-width: 1400px; /* Adjust this value to increase the width */
+        }
 
 
 /*.box {
@@ -34,6 +37,7 @@ body {
     position: relative;
     /* background-color: rgba(237, 242, 249, 1);*/
     margin-bottom: 10px;
+    
     text-align: left;
     border-radius: 0px;
     /* box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);*/
@@ -97,6 +101,11 @@ a {
 .text-thead th {
     font-weight: 600;
 }
+.small-td {
+    font-family: 'Arial', sans-serif; /* Change to your preferred font */
+    font-size: 14px; /* Set the desired font size */
+    color: #333; /* Set the desired font color */
+}
 
 
 
@@ -141,6 +150,14 @@ a {
 .dataTable-table> :not(:first-child) {
     border-top: 2px solid white;
 }
+ th i
+ {
+  margin-left: 8px; /* Add space between text and icon */
+  color: #007bff; /* Change the color of the icon */
+ }
+ i{
+  color: #007bff; /* Change the color of the icon */
+ }
 
 .selected {
     background-color: #f0f0f0;
@@ -148,3 +165,23 @@ a {
     color: #000;
     /* Optional: Change text color for selected row */
 }
+
+
+.head-box{
+	
+	/*box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;*/
+	/*box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;*/
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	
+	display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+             height: 10vh;/* Full viewport height */
+            text-align: center; /* Center text horizontally */
+}
+.shadow-box{
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+

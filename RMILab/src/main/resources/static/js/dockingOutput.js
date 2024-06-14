@@ -15,6 +15,7 @@ const email = localStorage.getItem("email");
 //alert(email);
 //alert(jobId);
 // Function to call the getJobByName API
+var coordinates;
 function getJobByName(jobName) {
     const encodedJobName = encodeURIComponent(jobName);
     const url = `/GeinDock/dock/getJobByName?jobName=${encodedJobName}`;
@@ -28,16 +29,28 @@ function getJobByName(jobName) {
         })
         .then(job => {
           //  console.log(job);
-          //  console.log('Job object:', job);
+            console.log('Job object:', job);
+            
+           var coordinatesStr =  job.coordinates;
+            const jsonObject = JSON.parse(coordinatesStr);
+            //coordinates  = `Center:{x: ${jsonObject.center.x}, y: ${jsonObject.center.y}, z: ${jsonObject.center.z}} Size:{${jsonObject.size.x}, ${jsonObject.size.y}, ${jsonObject.size.z}}`;
+           coordinates = `Center:{x: ${jsonObject.center.x.toFixed(2)}, y: ${jsonObject.center.y.toFixed(2)}, z: ${jsonObject.center.z.toFixed(2)}} Size:{x: ${jsonObject.size.x.toFixed(2)}, y: ${jsonObject.size.y.toFixed(2)}, z: ${jsonObject.size.z.toFixed(2)}}`;
+			coordinates = `{${jsonObject.center.x.toFixed(2)},${jsonObject.center.y.toFixed(2)},${jsonObject.center.z.toFixed(2)}}`;
             const proteinFileLink = document.getElementById('proteinFileLink');
-            proteinFileLink.textContent = job.proteinFile;
+            //proteinFileLink.textContent = job.proteinFile;
+            
 
             const ligandFileLink = document.getElementById('ligandFileLink');
-            ligandFileLink.textContent = job.ligandFiles;
+            //ligandFileLink.textContent = job.ligandFiles;
+            
+            const complexFileLink = document.getElementById('complexFileLink');
+            //complexFileLink.textContent = job.outputFile;
+            
             var url = `/GeinDock/dock/download?jobName=${encodeURIComponent(jobName)}&email=${encodeURIComponent(email)}&fileType=${encodeURIComponent('protein')}&fileName=${encodeURIComponent(job.proteinFile)}`;
            console.log("got url ",url);
             proteinFileLink.href = `/GeinDock/dock/download?jobName=${encodeURIComponent(jobName)}&email=${encodeURIComponent(email)}&fileType=protein&fileName=${encodeURIComponent(job.proteinFile)}`;
             ligandFileLink.href = `/GeinDock/dock/download?jobName=${encodeURIComponent(jobName)}&email=${encodeURIComponent(email)}&fileType=ligand&fileName=${encodeURIComponent(job.ligandFiles)}`;
+			complexFileLink.href = `/GeinDock/dock/download?jobName=${encodeURIComponent(jobName)}&email=${encodeURIComponent(email)}&fileType=complex&fileName=${encodeURIComponent(job.outputFile)}`;          
           //  proteinFileLink.target = url;
         })
         .catch(error => {
@@ -426,13 +439,22 @@ async function downloadDockingTable(jobName, email) {
          modeCell.textContent = item.mode;
          row.appendChild(modeCell);
 
-         const vinaScore = document.createElement('td');
+         
+         
+          const vinaScore = document.createElement('td');
          vinaScore.textContent = item.affinity;
          row.appendChild(vinaScore);
+         
+         const coordinatescol = document.createElement('td');
+         coordinatescol.textContent = coordinates;
+          coordinatescol.classList.add('small-td');
+         row.appendChild(coordinatescol);
 
           const ligandFileCell = document.createElement('td');
           const fileName = item.ligand.split("\\").pop() || item.ligand.split("/").pop();
           const fileLink = document.createElement('a');
+          fileLink.classList.add('fs--2');
+          
           fileLink.href = `/GeinDock/dock/download?jobName=${encodeURIComponent(jobName)}&email=${encodeURIComponent(email)}&fileType=output&fileName=${encodeURIComponent(fileName)}`;
            fileLink.textContent = fileName;
            //fileLink.setAttribute('target', '_blank');

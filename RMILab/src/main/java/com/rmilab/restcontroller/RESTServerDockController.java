@@ -211,6 +211,7 @@ public class RESTServerDockController {
         try {
             // Use FileService to construct the file path
             String filePathString = fileService.getFilePathFromName(jobName, email, fileType, fileName);
+            System.out.println("Got file path to download "+filePathString);
             Path filePath = Paths.get(filePathString).normalize();
             Resource resource = new UrlResource(filePath.toUri());
 
