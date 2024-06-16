@@ -75,7 +75,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/css/**", "/js/**", "/images/**").permitAll()
-                .antMatchers("/home", "/pricing","/about","/contact").permitAll()
+                .antMatchers("/home","/", "/pricing","/about","/contact").permitAll()
                 .antMatchers("/api/login", "/docking").permitAll() // allow everyone to access the login endpoint
                 .antMatchers("/registerForm", "/api/saveRegisterUser", "/api/saveRegisterUser", "api/verifyUser",
                         "/api/verifyUser", "/util/**","/about")
@@ -90,10 +90,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .anyRequest().authenticated()
                 .and()
                 .formLogin()
-                .loginPage("/home")
+                .loginPage("/")
                 .loginProcessingUrl("/login")
-                .defaultSuccessUrl("/home")
-                .failureUrl("/home?error")
+                .defaultSuccessUrl("/")
+                .failureUrl("/?error")
                 .permitAll();
 
         /*
